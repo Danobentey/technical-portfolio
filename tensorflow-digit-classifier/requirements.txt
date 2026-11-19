@@ -1,0 +1,8 @@
+# Local CPU environment used for the committed experiment. Colab has TensorFlow preinstalled.
+tensorflow-cpu==2.20.0; sys_platform == "linux"
+tensorflow==2.20.0; sys_platform != "linux"
+keras==3.15.1
+numpy==2.5.5
+matplotlib==3.10.7
+nbformat==5.10.4
+ipykernel==6.30.1

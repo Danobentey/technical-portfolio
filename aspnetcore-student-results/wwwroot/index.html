@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Results Lab</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><p class="eyebrow">ASP.NET CORE · SQLITE</p><h1>Student Results Lab</h1>
+      <p>Add synthetic results and explore the summary. The demo pass mark is 50.</p></header>
+    <section class="metrics" aria-label="Summary">
+      <article><span>Results</span><strong id="result-count">—</strong></article>
+      <article><span>Students</span><strong id="student-count">—</strong></article>
+      <article><span>Average score</span><strong id="average-score">—</strong></article>
+      <article><span>Pass rate</span><strong id="pass-rate">—</strong></article>
+    </section>
+    <section class="panel"><h2>Add a result</h2>
+      <form id="result-form">
+        <label>Student ID<input id="student-id" name="studentId" required maxlength="32" placeholder="STU001"></label>
+        <label>Subject<input id="subject" name="subject" required maxlength="80" placeholder="Mathematics"></label>
+        <label>Score<input id="score" name="score" type="number" min="0" max="100" step="1" required></label>
+        <button type="submit">Save result</button>
+      </form>
+      <p id="message" role="status" aria-live="polite"></p>
+    </section>
+    <section class="panel"><div class="section-heading"><h2>Results</h2><button id="refresh" type="button" class="secondary">Refresh</button></div>
+      <p id="list-note">Showing the first 100 results. Use the API for pagination and filters.</p>
+      <div class="table-wrapper"><table><thead><tr><th>Student ID</th><th>Subject</th><th>Score</th><th>Outcome</th><th>Action</th></tr></thead>
+        <tbody id="results-body"></tbody></table></div>
+    </section>
+  </main>
+</body>
+</html>

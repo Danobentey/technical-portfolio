@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+**/data/
+**/__pycache__/
+**/.venv/
+.ipynb_checkpoints/
+.env
+*.db
+*.db-shm
+*.db-wal
+*.keras
+*.h5
+.DS_Store
